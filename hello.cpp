@@ -2,14 +2,14 @@
 using namespace std;
 
 class node{
-public:
-node(int val);
-node* prev;
-node* next;
-node* toRight;
-node* toLeft;
-bool leaf;
-int value;
+	public:
+	node(int val);
+	node* prev;
+	node* next;
+	node* toRight;
+	node* toLeft;
+	bool leaf;
+	int value;
 };
 node::node(int val){
 value = val;
@@ -17,13 +17,13 @@ prev = NULL;
 next = NULL;
 }
 class linkedList{
-public:
-linkedList();
-bool add(int item);
-//bool insert(int item, int loc);
-
-node* head;
-node* tail;
+	public:
+	linkedList();
+	bool add(int item);
+	//bool insert(int item, int loc);
+	//private		
+	node* head;
+	node* tail;
 };
 linkedList::linkedList(){
 head = NULL;
@@ -49,20 +49,18 @@ new_node->prev = tail;
 tail = new_node;
 return true;
 }
- 
-
 class graph{
-public:
-graph();
-int getNumVertices();
-int getNumEdges();
-bool add(int vertexBegin, int vertexEnd, int edgeWeight);
-bool remove(node* vertexBegin, node* vertexEnd); 
-int getEdgeWeight(node* vertexBegin, node* vertexEnd);
-void viewNeighbors(int vertex);
-linkedList* vertices; 
-int capacity;
-int numItems;
+	public:
+	graph();
+	int getNumVertices();
+	int getNumEdges();
+	bool add(int vertexBegin, int vertexEnd, int edgeWeight);
+	bool remove(node* vertexBegin, node* vertexEnd); 
+	int getEdgeWeight(node* vertexBegin, node* vertexEnd);
+	void viewNeighbors(int vertex);
+	linkedList* vertices; 
+	int capacity;
+	int numItems;
 };
 graph::graph(){
 int capacity = 7;
