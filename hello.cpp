@@ -78,11 +78,12 @@ linkedList myList;
 myList.add(vertexBegin);
 myList.add(vertexEnd);
 vertices[numItems] = myList;
+numItems++;
 return true;
 }
 void graph::viewNeighbors(int vertex){
 cout<<"Here"<<endl;
-int index = 0;
+
 for(int i = 0; i < numItems; i++){
 if(vertices[i].head->value == vertex){
 cout<<"Here"<<endl;
